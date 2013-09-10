@@ -2,6 +2,8 @@
 
 $lightGray: #999;
 $grayMediumLight: #eaeaea;
+$mainBackground: #eee;
+$feedBackground: #fff;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -16,7 +18,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  background-color: $mainBackground;
   padding-left: 150px;
   padding-right: 150px;
 }
@@ -76,16 +78,21 @@ p {
 	font-weight: 300;
 }
 
+#feed {
+  padding-top: 50px;
+  background-color: $feedBackground;
+}
+
 /* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  font-weight: 200;
+  color: #000;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
   line-height: 1;
   &:hover {
     color: #fff;
@@ -96,26 +103,11 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: $lightGray;
-  a {
-    color: #555;
-    &:hover {
-      color: #222;
-    }
-  }
   small {
     float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
   }
 }
 
@@ -172,9 +164,6 @@ input {
   }
 }
 
-.span6 {
-	
-}
 
 .field_with_errors {
   @extend .control-group;
